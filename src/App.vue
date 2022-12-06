@@ -3,6 +3,9 @@ import { ref } from 'vue'
 
 const toWhom = ref('')
 const whoSends = ref('')
+const printPage = () => {
+  print()
+}
 </script>
 
 <template>
@@ -18,7 +21,7 @@ const whoSends = ref('')
           </div>
         </div>
       </div>
-      <form>
+      <form class="v-model-area">
         <div class="mt-3">
           <label for="to" class="block">To:</label>
           <input
@@ -41,7 +44,17 @@ const whoSends = ref('')
             v-model="whoSends"
           />
         </div>
+        <button @click.prevent="printPage">print</button>
       </form>
     </div>
   </div>
 </template>
+
+<style>
+@media print {
+  .v-model-area,
+  footer {
+    display: none;
+  }
+}
+</style>
