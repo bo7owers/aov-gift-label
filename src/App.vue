@@ -1,5 +1,8 @@
 <script setup>
-// ...
+import { ref } from 'vue'
+
+const toWhom = ref('')
+const whoSends = ref('')
 </script>
 
 <template>
@@ -10,11 +13,35 @@
           <img src="/assets/santa.svg" alt="" class="max-w-[12em]" />
           <div>
             <h1 class="font-serif text-4xl">Happy Holidays!</h1>
-            <div class="mt-4 bg-white text-black p-2 rounded">TO: John</div>
-            <div class="mt-2 bg-white text-black p-2 rounded">FROM: Joana</div>
+            <div class="mt-4 bg-white text-black p-2 rounded block w-full">To: {{ toWhom }}</div>
+            <div class="mt-2 bg-white text-black p-2 rounded block w-full">From: {{ whoSends }}</div>
           </div>
         </div>
       </div>
+      <form>
+        <div class="mt-3">
+          <label for="to" class="block">To:</label>
+          <input
+            type="text"
+            name="to"
+            id="to"
+            placeholder="Your special person"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:-red-500 focus:border-red-500 focus:outline-2 outline-red-500 block w-full p-2"
+            v-model="toWhom"
+          />
+        </div>
+        <div class="mt-3">
+          <label for="from">From:</label>
+          <input
+            type="text"
+            name="from"
+            id="from"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 hover:ring-emerald-700 block w-full p-2"
+            placeholder="Someone who loves them"
+            v-model="whoSends"
+          />
+        </div>
+      </form>
     </div>
   </div>
 </template>
