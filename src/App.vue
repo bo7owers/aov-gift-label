@@ -44,7 +44,14 @@ const printPage = () => {
             v-model="whoSends"
           />
         </div>
-        <button @click.prevent="printPage">print</button>
+        <div class="mt-4 flex justify-end w-full">
+          <button
+            @click.prevent="printPage"
+            class="bg-sky-700 hover:bg-sky-900 text-white font-bold py-2 px-4 rounded w-1/3"
+          >
+            Print Card
+          </button>
+        </div>
       </form>
     </div>
   </div>
