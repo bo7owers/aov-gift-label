@@ -1,3 +1,7 @@
+<script setup>
+// ...
+</script>
+
 <template>
   <div class="w-full h-full flex justify-center items-center">
     <div>
@@ -14,7 +18,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-// ...
-</script>
