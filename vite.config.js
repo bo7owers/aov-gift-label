@@ -17,4 +17,5 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+  base: '/aov-gift-label',
 })
